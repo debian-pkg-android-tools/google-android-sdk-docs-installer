@@ -27,6 +27,7 @@ all: $(DL_DIR)/$(UNPACK_DIR)/index.html
 		-e 's|http://fonts\.googleapis\.com/css.family=Roboto+Condensed|./font-family-roboto-condensed.css|g' \
 		-e 's|http://fonts\.googleapis\.com/css.family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold|./font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css|g' \
 		-e 's|<script src="https://www.google.com/jsapi" type="text/javascript"></script>||g' \
+		-e '/^  var _gaq = _gaq || \[\];/,/^  \})();/d' \
 		-e '/^<!-- Start of Tag -->/,/^<!-- End of Tag -->/d'
 
 install: all
