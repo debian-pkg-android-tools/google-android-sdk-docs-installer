@@ -1,0 +1,32 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+        mkdir -p /var/cache/google-android-sdk-docs-installer
+        cp /usr/share/google-android-sdk-docs-installer/Makefile \
+            /usr/share/google-android-sdk-docs-installer/docs-L_r01.zip.md5 \
+            /usr/share/google-android-sdk-docs-installer/docs-L_r01.zip.sha1 \
+            /usr/share/google-android-sdk-docs-installer/docs-L_r01.zip.sha256 \
+            /usr/share/google-android-sdk-docs-installer/font-family-roboto-condensed.css \
+            /usr/share/google-android-sdk-docs-installer/font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css \
+            /usr/share/google-android-sdk-docs-installer/swfobject.js \
+            /var/cache/google-android-sdk-docs-installer/
+        make -C /var/cache/google-android-sdk-docs-installer/ install
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
+
+

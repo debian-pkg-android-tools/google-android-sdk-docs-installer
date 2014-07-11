@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+#echo "google-android-build-tools postrm: $@"
+
+if [ "$1" = "purge" ]
+then
+	rm -rf /var/cache/google-android-sdk-docs-installer
+fi
+
+#DEBHELPER#
+
+exit 0
+

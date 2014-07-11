@@ -1,0 +1,25 @@
+Source: google-android-sdk-docs-installer
+Section: contrib/devel
+Priority: optional
+Maintainer: Android tools Maintainer <android-tools-devel@lists.alioth.debian.org>
+Uploaders: Hans-Christoph Steiner <hans@eds.org>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.9.5
+Homepage: https://developer.android.com/sdk/index.html
+Vcs-Git: https://alioth.debian.org/anonscm/git/android-tools/google-android-sdk-docs-installer.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=android-tools/google-android-sdk-docs-installer.git
+
+Package: google-android-sdk-docs-installer
+Architecture: all
+Depends: wget,
+         make | build-essential | dpkg-dev,
+         fonts-roboto,
+         ${misc:Depends},
+Description: Android SDK Documentation from Google
+ This package will download the Android SDK Documentation from Google and
+ create a Debian package.  This package also aims to strip out all calls to
+ the networking, including tracking services like Google Analytics.
+ .
+ WARNING: Installing this Debian package causes docs-L_r01.zip to
+ be downloaded from dl-ssl.google.com. The End User License Agreement of
+ this binary package is available at developer.android.com.

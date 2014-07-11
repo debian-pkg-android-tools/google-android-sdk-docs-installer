@@ -1,0 +1,20 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: google-android-sdk-docs-installer
+Upstream-Contact: Hans-Christoph Steiner <hans@eds.org>
+Source: http://anonscm.debian.org/gitweb/?p=android-tools/google-android-sdk-docs-installer.git
+
+Files: *
+Copyright: public-domain
+License: public-domain
+
+License: public-domain
+ Hans-Christoph Steiner wrote the files included here, he renounces all
+ copyright on these files. The files that constitute
+ google-android-sdk-docs-installer are in the public domain.
+ .
+ The contents of this project are dedicated to the public domain. To the extent
+ that dedication to the public domain is not available, everyone is granted a
+ worldwide, perpetual, royalty-free, non-exclusive license to exercise all
+ rights associated with the contents of this file for any purpose whatsoever.
+ .
+ No rights are reserved.

@@ -1,0 +1,7 @@
+for-postinst/Makefile  usr/share/google-android-sdk-docs-installer/
+for-postinst/docs-L_r01.zip.md5  usr/share/google-android-sdk-docs-installer/
+for-postinst/docs-L_r01.zip.sha1  usr/share/google-android-sdk-docs-installer/
+for-postinst/docs-L_r01.zip.sha256  usr/share/google-android-sdk-docs-installer/
+for-postinst/font-family-roboto-condensed.css  usr/share/google-android-sdk-docs-installer/
+for-postinst/font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css  usr/share/google-android-sdk-docs-installer/
+for-postinst/swfobject.js  usr/share/google-android-sdk-docs-installer/

@@ -1,0 +1,4 @@
+
+This is a packaged script that automatically downloads Google's Android SDK
+Documentation package and unpacks it into Debian-friendly paths.  It also
+strips out the tracking javascript and phoning home.

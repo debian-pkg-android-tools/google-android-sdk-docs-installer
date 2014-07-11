@@ -1,0 +1,4 @@
+debian/files
+debian/google-android-sdk-docs-installer/
+debian/google-android-sdk-docs-installer.debhelper.log
+debian/google-android-sdk-docs-installer.substvars
