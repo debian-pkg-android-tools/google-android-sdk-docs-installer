@@ -6,8 +6,7 @@ DL_DIR=/var/cache/google-android-sdk-docs-installer
 UNPACK_DIR=$(DL_DIR)/docs
 
 all: $(DL_DIR)/$(UNPACK_DIR)/index.html
-	find $(UNPACK_DIR)/ -name '*.js' -o -name '*.html' -o -name '*.css' \
-	| xargs sed -i \
+	find $(UNPACK_DIR)/ -name '*.js' -o -name '*.html' -o -name '*.css' | xargs sed -i \
 		-e 's|http://source.android.com|https://source.android.com|g' \
 		-e 's|http://developer.android.com|https://developer.android.com|g' \
 		-e 's|http://developer.chrome.com|https://developer.chrome.com|g' \
@@ -23,9 +22,10 @@ all: $(DL_DIR)/$(UNPACK_DIR)/index.html
 		-e 's|http://chart.googleapis.com|https://chart.googleapis.com|g' \
 		-e 's|http://en.wikipedia.org|https://en.wikipedia.org|g' \
 		-e 's|http://creativecommons.org|https://creativecommons.org|g' \
-		-e 's|//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js|./swfobject.js|g' \
 		-e 's|http://fonts\.googleapis\.com/css.family=Roboto+Condensed|./font-family-roboto-condensed.css|g' \
 		-e 's|http://fonts\.googleapis\.com/css.family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold|./font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css|g' \
+	find $(UNPACK_DIR)/ -name '*.html' | xargs sed -i \
+		-e 's|//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js|./swfobject.js|g' \
 		-e 's|<script src="https://www.google.com/jsapi" type="text/javascript"></script>||g' \
 		-e '/^  var _gaq = _gaq || \[\];/,/^  \})();/d' \
 		-e '/^<!-- Start of Tag -->/,/^<!-- End of Tag -->/d'
