@@ -27,7 +27,8 @@ all: $(DL_DIR)/$(UNPACK_DIR)/index.html
 	find $(UNPACK_DIR)/ -name '*.html' | xargs sed -i \
 		-e 's|//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js|./swfobject.js|g' \
 		-e 's|<script src="https://www.google.com/jsapi" type="text/javascript"></script>||g' \
-		-e '/^  var _gaq = _gaq || \[\];/,/^  \})();/d' \
+		-e 's/^  var _gaq = _gaq || \[\];$/  var _gaq = [];/' \
+		-e "/^  _gaq\.push(\['_setAccount', 'UA-5831155-1'\]);/,/^  \})();/d" \
 		-e '/^<!-- Start of Tag -->/,/^<!-- End of Tag -->/d'
 
 install: all
