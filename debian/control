@@ -18,8 +18,18 @@ Depends: wget,
 Description: Android SDK Documentation from Google
  This package will download the Android SDK Documentation from Google and
  create a Debian package.  This package also aims to strip out all calls to
- the networking, including tracking services like Google Analytics.
+ the networking, including tracking services like Google Analytics and
+ Doubleclick. These documentation files still require the Google "jsapi",
+ which is only available by fetching it each time from
+ http://www.google.com/jsapi.  This package forces it to use https://, but
+ otherwise, these docs have to phone home in order for any of the javascript
+ to work.
  .
- WARNING: Installing this Debian package causes docs-L_r01.zip to
- be downloaded from dl-ssl.google.com. The End User License Agreement of
- this binary package is available at developer.android.com.
+ WARNING: Installing this Debian package causes docs-L_r01.zip to be
+ downloaded from dl-ssl.google.com. The End User License Agreement of this
+ binary package is available at developer.android.com.  The code in the
+ documentation is licensed under the Apache 2.0, and the content is licensed
+ under Creative Commons CC-BY 2.5.  The CC-BY 2.5 license is non-free but can
+ be legally distributed by Debian.  This package avoids the issue all together
+ since each user directly downloads the files from Google, and must agree to
+ Google's license.
