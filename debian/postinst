@@ -11,7 +11,6 @@ case "$1" in
             /usr/share/google-android-sdk-docs-installer/docs-L_r01.zip.sha256 \
             /usr/share/google-android-sdk-docs-installer/font-family-roboto-condensed.css \
             /usr/share/google-android-sdk-docs-installer/font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css \
-            /usr/share/google-android-sdk-docs-installer/swfobject.js \
             /var/cache/google-android-sdk-docs-installer/
         make -C /var/cache/google-android-sdk-docs-installer/ install
     ;;

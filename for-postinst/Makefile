@@ -53,11 +53,16 @@ $(DL_DIR)/$(PKG_SOURCE): $(DL_DIR)
 	sha1sum -c $(PKG_SOURCE).sha1
 	sha256sum -c $(PKG_SOURCE).sha256
 
+$(DL_DIR)/swfobject.js: $(DL_DIR)
+	wget --continue 'https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js' \
+		--output-document=$(DL_DIR)/swfobject.js
+
 $(DL_DIR):
 	install -d -m0700 $(DL_DIR)
 
 clean:
-	-rm -rf -- $(UNPACK_DIR)
+	rm -rf -- $(UNPACK_DIR)
+	rm -f $(DL_DIR)/swfobject.js
 
 distclean: clean
 	-rm -rf -- $(DL_DIR)
