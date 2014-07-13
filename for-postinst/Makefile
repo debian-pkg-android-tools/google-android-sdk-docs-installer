@@ -23,11 +23,12 @@ all: $(DL_DIR)/$(UNPACK_DIR)/index.html
 		-e 's|http://en.wikipedia.org|https://en.wikipedia.org|g' \
 		-e 's|http://creativecommons.org|https://creativecommons.org|g' \
 		-e 's|http://fonts\.googleapis\.com/css.family=Roboto+Condensed|./font-family-roboto-condensed.css|g' \
-		-e 's|http://fonts\.googleapis\.com/css.family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold|./font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css|g' \
+		-e 's|http://fonts\.googleapis\.com/css.family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold|./font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css|g'
+
 	find $(UNPACK_DIR)/ -name '*.html' | xargs sed -i \
 		-e 's|//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js|./swfobject.js|g' \
 		-e 's|<script src="https://www.google.com/jsapi" type="text/javascript"></script>||g' \
-		-e 's/^  var _gaq = _gaq || \[\];$/  var _gaq = [];/' \
+		-e 's/^  var _gaq = _gaq || \[\];$$/  var _gaq = [];/' \
 		-e "/^  _gaq\.push(\['_setAccount', 'UA-5831155-1'\]);/,/^  \})();/d" \
 		-e '/^<!-- Start of Tag -->/,/^<!-- End of Tag -->/d'
 
