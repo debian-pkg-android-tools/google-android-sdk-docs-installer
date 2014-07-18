@@ -39,7 +39,7 @@ install: all
 	install -d -m0755 $(INSTALL_DIR)
 	install -m0644 $(UNPACK_DIR)/source.properties $(INSTALL_DIR)/
 	mv $(UNPACK_DIR) $(INSTALL_DIR)/
-	find $(INSTALL_DIR)/docs/ >> /var/lib/dpkg/info/google-android-sdk-docs-installer.list
+	find $(INSTALL_DIR)/docs >> /var/lib/dpkg/info/google-android-sdk-docs-installer.list
 
 uninstall:
 	rm -f $(INSTALL_DIR)/copyright.gz
