@@ -31,6 +31,8 @@ all: $(DL_DIR)/$(UNPACK_DIR)/index.html
 		-e 's/^  var _gaq = _gaq || \[\];$$/  var _gaq = [];/' \
 		-e "/^  _gaq\.push(\['_setAccount', 'UA-5831155-1'\]);/,/^  \})();/d" \
 		-e '/^<!-- Start of Tag -->/,/^<!-- End of Tag -->/d'
+	find $(UNPACK_DIR)/ | xargs chmod a+r
+	find $(UNPACK_DIR)/ -type d | xargs chmod 0755
 
 install: all
 	install -d -m0755 /usr/share/doc/google-android-sdk-docs
