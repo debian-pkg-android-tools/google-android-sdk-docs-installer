@@ -36,7 +36,7 @@ all: $(DL_DIR)/$(UNPACK_DIR)/index.html
 
 install: all
 	install -d -m0755 /usr/share/doc/google-android-sdk-docs
-	gzip -9 $(UNPACK_DIR)/NOTICE.txt > /usr/share/doc/google-android-sdk-docs/copyright.gz
+	mv $(UNPACK_DIR)/docs /usr/share/doc/google-android-sdk-docs/
 	install -m0644 $(UNPACK_DIR)/source.properties /usr/share/doc/google-android-sdk-docs/
 
 uninstall:
