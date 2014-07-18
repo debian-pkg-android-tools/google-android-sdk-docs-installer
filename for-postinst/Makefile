@@ -4,6 +4,7 @@ PKG_SOURCE_URL:=https://dl-ssl.google.com/android/repository/${PKG_SOURCE}
 
 DL_DIR=/var/cache/google-android-sdk-docs-installer
 UNPACK_DIR=$(DL_DIR)/docs
+INSTALL_DIR=/usr/share/doc/google-android-sdk-docs
 
 all: $(DL_DIR)/$(UNPACK_DIR)/index.html
 	find $(UNPACK_DIR)/ -name '*.js' -o -name '*.html' -o -name '*.css' | xargs sed -i \
@@ -35,15 +36,14 @@ all: $(DL_DIR)/$(UNPACK_DIR)/index.html
 	find $(UNPACK_DIR)/ -type d | xargs chmod 0755
 
 install: all
-	install -d -m0755 /usr/share/doc/google-android-sdk-docs
-	mv $(UNPACK_DIR)/docs /usr/share/doc/google-android-sdk-docs/
-	install -m0644 $(UNPACK_DIR)/source.properties /usr/share/doc/google-android-sdk-docs/
+	install -d -m0755 $(INSTALL_DIR)
+	install -m0644 $(UNPACK_DIR)/source.properties $(INSTALL_DIR)/
+	mv $(UNPACK_DIR)/docs $(INSTALL_DIR)/
+	find $(INSTALL_DIR)/docs/ >> /var/lib/dpkg/info/google-android-sdk-docs-installer.list
 
 uninstall:
-	rm -f /usr/share/doc/google-android-sdk-docs/copyright.gz
-	for d in `find \
-			/usr/share/doc/google-android-sdk-docs \
-			/usr/share/doc -type d -empty`; do \
+	rm -f $(INSTALL_DIR)/copyright.gz
+	for d in `find $(INSTALL_DIR) /usr/share/doc -type d -empty`; do \
 		test -d $$d && rmdir $$d || true ; done
 
 $(DL_DIR)/$(UNPACK_DIR)/index.html: $(DL_DIR)/$(PKG_SOURCE)
