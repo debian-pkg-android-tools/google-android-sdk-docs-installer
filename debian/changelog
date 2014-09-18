@@ -1,3 +1,10 @@
+google-android-sdk-docs-installer (20.0.0.1) unstable; urgency=low
+
+  * fix stupid mistakes in Makefile
+  * add all files to .list file
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Thu, 17 Jul 2014 20:16:10 -0400
+
 google-android-sdk-docs-installer (20.0.0.0) unstable; urgency=low
 
   * First release (Closes: #754622)
