@@ -25,7 +25,8 @@ all: $(DL_DIR)/$(UNPACK_DIR)/index.html
 		-e 's|http://en.wikipedia.org|https://en.wikipedia.org|g' \
 		-e 's|http://creativecommons.org|https://creativecommons.org|g' \
 		-e 's|http://fonts\.googleapis\.com/css.family=Roboto+Condensed|./font-family-roboto-condensed.css|g' \
-		-e 's|http://fonts\.googleapis\.com/css.family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold|./font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css|g'
+		-e 's|http://fonts\.googleapis\.com/css.family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold|./font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css|g' \
+		-e 's|href="../../../guide/topics/fundamentals|href="../../../guide/components|g'
 
 	find $(UNPACK_DIR)/ -name '*.html' | xargs sed -i \
 		-e 's|//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js|./swfobject.js|g' \
