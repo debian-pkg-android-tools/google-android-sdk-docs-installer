@@ -1,3 +1,11 @@
+google-android-sdk-docs-installer (20.0.0.2) unstable; urgency=low
+
+  * include source.properties in file list
+  * overwrite existing files in cache when unpacking
+  * fix broken links to guide/topics/fundamentals section
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Mon, 20 Oct 2014 17:13:42 -0400
+
 google-android-sdk-docs-installer (20.0.0.1) unstable; urgency=low
 
   * fix stupid mistakes in Makefile
