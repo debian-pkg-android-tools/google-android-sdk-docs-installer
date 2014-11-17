@@ -12,6 +12,8 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=android-tools/google-android-sd
 Package: google-android-sdk-docs-installer
 Architecture: all
 Depends: wget,
+         unzip,
+         ca-certificates,
          make | build-essential | dpkg-dev,
          fonts-roboto,
          ${misc:Depends},
