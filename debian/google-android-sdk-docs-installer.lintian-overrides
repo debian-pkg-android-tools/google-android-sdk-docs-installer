@@ -1,0 +1,3 @@
+# this directory will be filled later once the binaries have been downloaded
+# from Google and unpacked into place.
+google-android-sdk-docs-installer: package-contains-empty-directory usr/share/doc/google-android-sdk-docs/
