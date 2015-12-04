@@ -55,9 +55,7 @@ $(DL_DIR)/$(UNPACK_DIR)/index.html: $(DL_DIR)/$(PKG_SOURCE)
 $(DL_DIR)/$(PKG_SOURCE): $(DL_DIR)
 	cd $(DL_DIR) && \
 		wget --continue $(PKG_SOURCE_URL)
-	md5sum -c $(PKG_SOURCE).md5
 	sha1sum -c $(PKG_SOURCE).sha1
-	sha256sum -c $(PKG_SOURCE).sha256
 
 $(DL_DIR)/swfobject.js: $(DL_DIR)
 	wget --continue 'https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js' \
