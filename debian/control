@@ -27,8 +27,8 @@ Description: Android SDK Documentation from Google
  otherwise, these docs have to phone home in order for any of the javascript
  to work.
  .
- WARNING: Installing this Debian package causes docs-L_r01.zip to be
- downloaded from dl-ssl.google.com. The End User License Agreement of this
+ WARNING: Installing this Debian package causes docs-23_r01.zip to be
+ downloaded from https://dl.google.com. The End User License Agreement of this
  binary package is available at developer.android.com.  The code in the
  documentation is licensed under the Apache 2.0, and the content is licensed
  under Creative Commons CC-BY 2.5.  The CC-BY 2.5 license is non-free but can
