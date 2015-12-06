@@ -6,7 +6,7 @@ case "$1" in
     configure)
         mkdir -p /var/cache/google-android-sdk-docs-installer
         cp /usr/share/google-android-sdk-docs-installer/Makefile \
-            /usr/share/google-android-sdk-docs-installer/docs-L_r01.zip.sha1 \
+            /usr/share/google-android-sdk-docs-installer/docs-23_r01.zip.sha1 \
             /usr/share/google-android-sdk-docs-installer/font-family-roboto-condensed.css \
             /usr/share/google-android-sdk-docs-installer/font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css \
             /var/cache/google-android-sdk-docs-installer/
