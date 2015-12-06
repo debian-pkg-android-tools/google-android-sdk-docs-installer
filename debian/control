@@ -28,10 +28,17 @@ Description: Android SDK Documentation from Google
  to work.
  .
  WARNING: Installing this Debian package causes docs-23_r01.zip to be
- downloaded from https://dl.google.com. The End User License Agreement of this
- binary package is available at developer.android.com.  The code in the
- documentation is licensed under the Apache 2.0, and the content is licensed
- under Creative Commons CC-BY 2.5.  The CC-BY 2.5 license is non-free but can
- be legally distributed by Debian.  This package avoids the issue all together
- since each user directly downloads the files from Google, and must agree to
- Google's license.
+ downloaded from https://dl.google.com. Also, since Google is often
+ blocked in China, the install process will try again on Chinese
+ mirrors if the Google central download repo is not available.  Since
+ the zipball is checked against the embedded SHA1 checksum, the
+ install will fail if the mirror contains a corrupted version.
+ .
+ The End User License Agreement of this binary package is available here:
+  https://developer.android.com/sdk/terms.html
+ .
+ The code in the documentation is licensed under the Apache 2.0, and
+ the content is licensed under Creative Commons CC-BY 2.5.  The CC-BY
+ 2.5 license is non-free but can be legally distributed by Debian.
+ This package avoids the issue all together since each user directly
+ downloads the files from Google, and must agree to Google's license.
