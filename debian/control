@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 5)
 Standards-Version: 3.9.6
 Homepage: https://developer.android.com/sdk/index.html
 Vcs-Git: https://alioth.debian.org/anonscm/git/android-tools/google-android-sdk-docs-installer.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=android-tools/google-android-sdk-docs-installer.git
+Vcs-Browser: https://anonscm.debian.org/cgit/android-tools/google-android-sdk-docs-installer.git
 
 Package: google-android-sdk-docs-installer
 Architecture: all
