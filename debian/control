@@ -2,9 +2,10 @@ Source: google-android-sdk-docs-installer
 Section: contrib/devel
 Priority: optional
 Maintainer: Android tools Maintainer <android-tools-devel@lists.alioth.debian.org>
-Uploaders: Hans-Christoph Steiner <hans@eds.org>
+Uploaders: Hans-Christoph Steiner <hans@eds.org>,
+           Mouaad Aallam <Mouaad@Aallam.com>
 Build-Depends: debhelper (>= 5)
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Homepage: https://developer.android.com/sdk/index.html
 Vcs-Git: https://alioth.debian.org/anonscm/git/android-tools/google-android-sdk-docs-installer.git
 Vcs-Browser: https://anonscm.debian.org/cgit/android-tools/google-android-sdk-docs-installer.git
@@ -16,6 +17,8 @@ Depends: wget,
          ca-certificates,
          make | build-essential | dpkg-dev,
          fonts-roboto,
+         debconf,
+         po-debconf,
          ${misc:Depends},
 Description: Android SDK Documentation from Google
  This package will download the Android SDK Documentation from Google and

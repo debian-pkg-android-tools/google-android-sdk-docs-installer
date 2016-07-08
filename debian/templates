@@ -1,0 +1,6 @@
+Template: google-android-sdk-docs-installer/mirror
+Type: select
+Choices: dl-ssl.google.com, mirrors.neusoft.edu.cn
+Default: dl-ssl.google.com
+_Description: Mirror to download Google's Android SDK Documentation package ?
+ Please select your prefered mirror to download Google's Android SDK Documentation package from.

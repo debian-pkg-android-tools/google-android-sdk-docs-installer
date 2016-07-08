@@ -1,9 +1,5 @@
-
 PKG_SOURCE:=docs-23_r01.zip
-PKG_SOURCE_URLS:= \
-	https://dl.google.com/android/repository/${PKG_SOURCE} \
-	http://mirrors.neusoft.edu.cn/android/repository/${PKG_SOURCE} \
-	http://mirrors.opencas.cn/android/repository/${PKG_SOURCE}
+PKG_SOURCE_URL:=http://${DL_MIRROR}/android/repository/${PKG_SOURCE}
 
 DL_DIR=/var/cache/google-android-sdk-docs-installer
 UNPACK_DIR=$(DL_DIR)/docs
@@ -57,10 +53,7 @@ $(DL_DIR)/$(UNPACK_DIR)/index.html: $(DL_DIR)/$(PKG_SOURCE)
 
 $(DL_DIR)/$(PKG_SOURCE): $(DL_DIR)
 	cd $(DL_DIR) && \
-		for url in $(PKG_SOURCE_URLS); do \
-			wget --continue $$url || continue; \
-			break; \
-		done
+		su nobody -s /bin/sh -c "wget --continue $(PKG_SOURCE_URL)"
 	sha1sum -c $(PKG_SOURCE).sha1
 
 $(DL_DIR)/swfobject.js: $(DL_DIR)

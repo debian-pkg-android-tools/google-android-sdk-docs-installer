@@ -7,9 +7,15 @@ set -e
 if [ "$1" = "purge" ]
 then
 	rm -rf /var/cache/google-android-sdk-docs-installer
+	if [ -e /usr/share/debconf/confmodule ]
+	then
+		# Source debconf library.
+		. /usr/share/debconf/confmodule
+		# Remove changes to the db.
+		db_purge
+	fi
 fi
 
 #DEBHELPER#
 
 exit 0
-
