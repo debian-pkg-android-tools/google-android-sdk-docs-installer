@@ -31,7 +31,8 @@ Description: Android SDK Documentation from Google
  to work.
  .
  WARNING: Installing this Debian package causes docs-23_r01.zip to be
- downloaded from https://dl.google.com. Also, since Google is often
+ downloaded from https://dl.google.com and/or from other suggested mirrors. 
+ Also, since Google is often
  blocked in China, the install process will try again on Chinese
  mirrors if the Google central download repo is not available.  Since
  the zipball is checked against the embedded SHA1 checksum, the

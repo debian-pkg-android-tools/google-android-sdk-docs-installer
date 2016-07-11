@@ -1,5 +1,5 @@
 PKG_SOURCE:=docs-23_r01.zip
-PKG_SOURCE_URL:=http://${DL_MIRROR}/android/repository/${PKG_SOURCE}
+PKG_SOURCE_URL:=${DL_MIRROR}/android/repository/${PKG_SOURCE}
 
 DL_DIR=/var/cache/google-android-sdk-docs-installer
 UNPACK_DIR=$(DL_DIR)/docs
