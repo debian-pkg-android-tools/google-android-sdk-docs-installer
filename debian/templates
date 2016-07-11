@@ -1,6 +1,6 @@
 Template: google-android-sdk-docs-installer/mirror
 Type: select
 Choices: https://dl.google.com, http://mirrors.neusoft.edu.cn, http://android-mirror.bugly.qq.com:8080/
-Default: http://dl.google.com
+Default: https://dl.google.com
 _Description: Mirror to download Google's Android SDK Documentation package ?
  Please select your prefered mirror to download Google's Android SDK Documentation package from.
