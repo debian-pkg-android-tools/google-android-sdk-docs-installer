@@ -1,6 +1,6 @@
 google-android-sdk-docs-installer (23.0.0.1) unstable; urgency=medium
 
-  * Add Mirrors choosing feature with debconf
+  * Add mirrors choosing feature with debconf shared template
 
  -- Mouaad Aallam <Mouaad@Aallam.com>  Thu, 07 Jul 2016 23:44:00 +0000
 

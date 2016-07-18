@@ -5,9 +5,16 @@ set -e
 # Source debconf library.
 . /usr/share/debconf/confmodule
 
-# Mirror select
-db_input high google-android-sdk-docs-installer/mirror || true
-db_go
+#Get owners list
+db_metaget google-android-installers/mirror owners
+OWNERS=$RET
+
+#Check if the package is the only owner
+if [ "$OWNERS" = "google-android-sdk-docs-installer" ]; then
+	#Ask the quastion
+	db_input high google-android-installers/mirror || true
+	db_go
+fi
 
 #DEBHELPER#
 

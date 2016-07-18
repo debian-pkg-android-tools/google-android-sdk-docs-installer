@@ -11,8 +11,10 @@ then
 	then
 		# Source debconf library.
 		. /usr/share/debconf/confmodule
-		# Remove changes to the db.
-		db_purge
+		# Unregister the package
+		if db_get google-android-installers/mirror; then
+			db_unregister google-android-installers/mirror
+		fi
 	fi
 fi
 

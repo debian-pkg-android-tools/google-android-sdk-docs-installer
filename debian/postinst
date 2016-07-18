@@ -3,18 +3,23 @@
 set -e
 
 . /usr/share/debconf/confmodule
-
-db_get google-android-sdk-docs-installer/mirror
+db_get google-android-installers/mirror
 
 case "$1" in
     configure)
-        install -d -m0700 -o nobody -g nogroup /var/cache/google-android-sdk-docs-installer
-        cp /usr/share/google-android-sdk-docs-installer/Makefile \
-            /usr/share/google-android-sdk-docs-installer/docs-23_r01.zip.sha1 \
-            /usr/share/google-android-sdk-docs-installer/font-family-roboto-condensed.css \
-            /usr/share/google-android-sdk-docs-installer/font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css \
-            /var/cache/google-android-sdk-docs-installer/
-        make -C /var/cache/google-android-sdk-docs-installer/ DL_MIRROR="$RET" install
+        if [ "${DEBCONF_RECONFIGURE}" = "1" ]; then
+            db_fset google-android-installers/mirror seen false
+            db_input high google-android-installers/mirror || true
+            db_go || true
+        else
+            install -d -m0700 -o nobody -g nogroup /var/cache/google-android-sdk-docs-installer
+            cp /usr/share/google-android-sdk-docs-installer/Makefile \
+                /usr/share/google-android-sdk-docs-installer/docs-23_r01.zip.sha1 \
+                /usr/share/google-android-sdk-docs-installer/font-family-roboto-condensed.css \
+                /usr/share/google-android-sdk-docs-installer/font-family-roboto-light-regular-medium-thin-italic-mediumitalic-bold.css \
+                /var/cache/google-android-sdk-docs-installer/
+            make -C /var/cache/google-android-sdk-docs-installer/ DL_MIRROR="$RET" install
+        fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
