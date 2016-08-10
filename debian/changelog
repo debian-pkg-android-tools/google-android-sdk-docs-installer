@@ -1,6 +1,9 @@
 google-android-sdk-docs-installer (23.0.0.1) unstable; urgency=medium
 
   * Add mirrors choosing feature with debconf shared template
+  * d/compat: update compat version to 9
+  * d/control: update build-depends debhelper to >= 9
+  * Add Indonesian, Portuguese and German PO translation files
 
  -- Mouaad Aallam <Mouaad@Aallam.com>  Thu, 07 Jul 2016 23:44:00 +0000
 
