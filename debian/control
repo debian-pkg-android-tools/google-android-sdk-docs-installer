@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Android tools Maintainer <android-tools-devel@lists.alioth.debian.org>
 Uploaders: Hans-Christoph Steiner <hans@eds.org>,
            Mouaad Aallam <Mouaad@Aallam.com>
-Build-Depends: debhelper (>= 5)
+Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.8
 Homepage: https://developer.android.com/sdk/index.html
 Vcs-Git: https://alioth.debian.org/anonscm/git/android-tools/google-android-sdk-docs-installer.git
