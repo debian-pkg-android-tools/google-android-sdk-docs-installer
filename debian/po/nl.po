@@ -1,0 +1,37 @@
+# Dutch translation of google-android-m2repository-installer debconf templates.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the google-android-m2repository-installer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Frans Spiesschaert <Frans.Spiesschaert@yucom.be>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: google-android-m2repository-installer\n"
+"Report-Msgid-Bugs-To: google-android-m2repository-installer@packages.debian."
+"org\n"
+"POT-Creation-Date: 2016-07-18 13:32+0000\n"
+"PO-Revision-Date: 2016-08-03 16:06+0200\n"
+"Last-Translator: Frans Spiesschaert <Frans.Spiesschaert@yucom.be>\n"
+"Language-Team: Debian Dutch l10n Team <debian-l10n-dutch@lists.debian.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#. Type: select
+#. Description
+#: ../templates:1001
+msgid "Mirror to download packages ?"
+msgstr "Welke spiegelserver gebruiken voor het downloaden van pakketten?"
+
+#. Type: select
+#. Description
+#: ../templates:1001
+msgid ""
+"Please select your prefered mirror to download Google's Android packages "
+"from."
+msgstr ""
+"Selecteer de spiegelserver waar u Googles Android-pakketten het liefst gaat "
+"ophalen."

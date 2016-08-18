@@ -1,6 +1,7 @@
 google-android-sdk-docs-installer (23.0.0.2) unstable; urgency=medium
 
   * Add Czech PO translation file
+  * Add Dutch PO translation file
 
  -- Mouaad Aallam <Mouaad@Aallam.com>  Sun, 14 Aug 2016 22:45:07 +0000
 
