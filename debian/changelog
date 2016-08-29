@@ -1,3 +1,9 @@
+google-android-sdk-docs-installer (23.0.0.3) unstable; urgency=medium
+
+  * Add French PO translation file
+
+ -- Mouaad Aallam <Mouaad@Aallam.com>  Mon, 29 Aug 2016 17:31:38 +0100
+
 google-android-sdk-docs-installer (23.0.0.2) unstable; urgency=medium
 
   * Add Czech PO translation file
